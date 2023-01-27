@@ -11,7 +11,9 @@ function Counter() {
   return (
     <div>
       <h1>{count}</h1>
-      <button className={classNames.btn} onClick={increment}>increment</button>
+      <button className={classNames.btn} onClick={increment}>
+        increment
+      </button>
     </div>
   );
 }
