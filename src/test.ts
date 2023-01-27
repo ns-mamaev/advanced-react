@@ -1,5 +1,3 @@
-export function SomeFn(arg: number): never {
+export function SomeFn(arg: number): void {
   console.log('RANDOM FN 123');
-
-  throw new Error('ОШИБКА');
 }
