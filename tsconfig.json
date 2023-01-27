@@ -12,8 +12,8 @@
     "esModuleInterop": true,
     // add default import support for old commonjs modules
     "allowSyntheticDefaultImports": true,
-    // for apsolute  in imports
-    "baseUrl": "."
+    // for apsolute  in imports don't working
+    // "baseUrl": "."
   },
   "ts-node": {
     "compilerOptions": {

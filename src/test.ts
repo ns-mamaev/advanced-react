@@ -1,5 +1,5 @@
-export function SomeFn(arg: number): string {
-  console.log('RANDOM FN');
+export function SomeFn(arg: number): never {
+  console.log('RANDOM FN 123');
 
-  return '';
+  throw new Error('ОШИБКА');
 }
