@@ -16,5 +16,17 @@
   bottom: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
+  column-gap: 16px;
+
+  &_collapsed {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+}
+
+.sidebarSwitcher {
+  margin: 0 auto;
+  display: block;
 }

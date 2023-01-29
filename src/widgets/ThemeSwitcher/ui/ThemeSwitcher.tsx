@@ -17,7 +17,11 @@ export function ThemeSwitcher({ className }: ThemeSwitcherProps) {
       theme={ThemeButton.CLEAR}
       className={cn(cls.ThemeSwitcher, {}, [className])}
       onClick={toggleTheme}>
-      {theme === Theme.LIGHT ? <DarkIcon stroke="#ccc" /> : <LightIcon />}
+      {theme === Theme.LIGHT ? (
+        <LightIcon stroke="var(--inverted-primary-color)" />
+      ) : (
+        <DarkIcon stroke="var(--inverted-primary-color)" />
+      )}
     </Button>
   );
 }
