@@ -1,8 +1,8 @@
 import { SomeFn } from './test';
 import { createRoot } from 'react-dom/client';
-import App from './App';
+import App from './app/App';
 import { BrowserRouter } from 'react-router-dom';
-import ThemeProvider from './theme/themeProvider';
+import { ThemeProvider } from 'app/providers/ThemeProvider';
 
 SomeFn(123);
 

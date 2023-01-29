@@ -1,0 +1,25 @@
+.AppLink {
+  text-decoration: none;
+  color: var(--inverted-primary-color);
+  font: var(--font-l);
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.primary {
+  color: var(--primary-color);
+}
+
+.inverted {
+  color: var(--inverted-primary-color);
+}
+
+.green {
+  color: greenyellow;
+}
