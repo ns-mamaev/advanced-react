@@ -4,6 +4,7 @@ import './styles/index.scss';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { Suspense } from 'react';
+import { Loader } from 'shared/ui/Loader/Loader';
 import { useTheme } from './providers/ThemeProvider';
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
 
   return (
     <div className={cn('app', { hovered: true, active: true }, [theme, 'cls2'])}>
-      <Suspense fallback='load..'>
+      <Suspense fallback={<Loader />}>
         <Navbar />
         <div className='content-page'>
           <Sidebar />
