@@ -17,7 +17,8 @@ export function LangSwitcher({ className }: LangSwitcherProps) {
     <Button
       theme={ThemeButton.CLEAR_INVERTED}
       onClick={onToggle}
-      className={cn('', {}, [className])}>
+      className={cn('', {}, [className])}
+    >
       {t('язык')}
     </Button>
   );
