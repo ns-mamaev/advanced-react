@@ -5,7 +5,6 @@ module.exports = {
     jest: true,
   },
   extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
-  overrides: [],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     sourceType: 'module',
@@ -27,8 +26,21 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'jsx-quotes': ['error', 'prefer-single'],
     'max-len': ['error', { ignoreComments: true, code: 100 }],
+    'i18next/no-literal-string': [
+      'error',
+      {
+        markupOnly: true,
+        ignoreAttribute: ['data-testid'],
+      },
+    ],
   },
   globals: {
     __IS_DEV__: true,
+  },
+  overrides: {
+    files: ['**/src/**/*.test.{ts,tsx}'],
+    rules: {
+      'i18next/no-literal-string': 'off',
+    },
   },
 };
