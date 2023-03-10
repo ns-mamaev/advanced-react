@@ -13,7 +13,7 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-    'react/jsx-filename-extension': [2, { extensions: ['.jsx', '.tsx'] }],
+    'react/jsx-filename-extension': [2, { extensions: ['.jsx', '.tsx', '.ts', '.js'] }],
     'react/react-in-jsx-scope': 'off',
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',

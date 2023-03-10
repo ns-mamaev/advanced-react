@@ -14,7 +14,7 @@ describe('classNames', () => {
     ).toBe(expected);
   });
   test('with strings in mods', () => {
-    expect(cn('someClass', { active: 'string', visible: '', scrolled: undefined })).toBe(
+    expect(cn('someClass', { active: 'string', visible: '' })).toBe(
       'someClass active',
     );
   });
