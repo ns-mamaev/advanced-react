@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-function AboutPage() {
+const AboutPage: FC = () => {
   const { t } = useTranslation('about');
 
   return (
@@ -9,6 +10,6 @@ function AboutPage() {
       <p>{t('основной текст')}</p>
     </div>
   );
-}
+};
 
 export default AboutPage;

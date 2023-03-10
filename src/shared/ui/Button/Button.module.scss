@@ -13,3 +13,9 @@
 .clear-inverted {
   color: var(--inverted-primary-color);
 }
+
+.outline {
+  padding: 10px 15px;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}

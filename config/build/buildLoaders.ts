@@ -1,11 +1,11 @@
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { RuleSetRule } from 'webpack';
+import { buildCssLoader } from './loaders/buildCssLoader';
 import { BuildOptions } from './types/config';
 
 export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
   const svgLoader = {
     test: /\.svg$/i,
-    issuer: /\.[jt]sx?$/,
+    // issuer: /\.[jt]sx?$/,
     use: ['@svgr/webpack'],
   };
 
@@ -14,25 +14,7 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
     use: [{ loader: 'file-loader' }],
   };
 
-  const cssLoader = {
-    test: /\.s[ac]ss$/i,
-    use: [
-      // Creates `style` nodes from JS strings
-      isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-      // Translates CSS into CommonJS
-      {
-        loader: 'css-loader',
-        options: {
-          modules: {
-            auto: (resPath: string): boolean => resPath.includes('.module.scss'),
-            localIdentName: isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]',
-          },
-        },
-      },
-      // Compiles Sass to CSS
-      'sass-loader',
-    ],
-  };
+  const cssLoader = buildCssLoader(isDev);
 
   const typeScriptLoader = {
     test: /\.tsx?$/,
