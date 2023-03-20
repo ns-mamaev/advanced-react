@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button } from 'shared/ui/Button/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
 // компонент для тестрирования
 export function BugButton() {
@@ -16,7 +16,7 @@ export function BugButton() {
 
   const { t } = useTranslation();
   return (
-    <Button onClick={onThrow}>
+    <Button theme={ButtonTheme.BACKGROUND_INVERTED} onClick={onThrow}>
       {t('Ошибка')}
     </Button>
   );

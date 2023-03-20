@@ -20,9 +20,9 @@ jobs:
         run: npm install
       - name: build project in production mode
         run: npm run build:prod
-      - name: tinting TypeStript
+      - name: linting TypeStript
         run: npm run lint:ts
-      - name: tinting SCSS
+      - name: linting SCSS
         run: npm run lint:scss
       - name: unit testing
         run: npm run test:unit

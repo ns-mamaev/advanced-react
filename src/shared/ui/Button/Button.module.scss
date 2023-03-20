@@ -19,3 +19,46 @@
   border: 2px solid var(--primary-color);
   color: var(--primary-color);
 }
+
+.background {
+  background: var(--bg-color);
+  color: var(--primary-color);
+  border: none;
+}
+
+.background-inverted {
+  background: var(--inverted-bg-color);
+  color: var(--inverted-primary-color);
+  border: none;
+}
+
+.size_m {
+  font: var(--font-m);
+
+  --button-size: var(--font-line-m);
+
+  width: var(--button-size);
+  height: var(--button-size);
+}
+
+.size_l {
+  font: var(--font-l);
+
+  --button-size: var(--font-line-l);
+
+  width: var(--button-size);
+  height: var(--button-size);
+}
+
+.size_xl {
+  font: var(--font-xl);
+
+  --button-size: var(--font-line-xl);
+
+  width: var(--button-size);
+  height: var(--button-size);
+}
+
+.long {
+  height: calc(2 * var(--button-size))
+}
