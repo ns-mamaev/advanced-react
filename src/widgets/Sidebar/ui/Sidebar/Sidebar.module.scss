@@ -21,7 +21,6 @@
   position: absolute;
   right: -24px;
   bottom: 24px;
-  z-index: 100;
 }
 
 .items {
@@ -62,7 +61,7 @@
 
   .linkText {
     width: 0;
-    opacity: 0;
+    display: none;
     margin-left: 0;
   }
 }

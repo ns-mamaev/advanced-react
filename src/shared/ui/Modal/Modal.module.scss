@@ -1,0 +1,43 @@
+.Modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #00000075;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.content {
+  padding: 24px;
+  background: var(--modal-background);
+  max-width: 600px;
+  width: 60%;
+  max-height: 80%;
+  border-radius: 12px;
+  transform: scale(0.5);
+  transition: transform 0.1s var(--modal-animation-function);
+}
+
+.opened {
+  opacity: 1;
+  pointer-events: all;
+  z-index: var(--modal-z-index);
+
+  .content {
+    transform: scale(1);
+  }
+}
+
+.closing {
+  .content {
+    transform: scale(0.5);
+    transition: transform 0.1s ease-in;
+  }
+}

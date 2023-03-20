@@ -11,8 +11,14 @@
   --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
 
   // sizes
-
   --navbar-height: 50px;
   --sidebar-width: 300px;
   --sidebar-width-collapsed: 60px;
+
+  // z-indexes
+  --modal-z-index: 1000;
+
+  // colors
+  --modal-background: #fff;
+  --modal-animation-function: cubic-bezier(.57,.39,.61,1.18);
 }
