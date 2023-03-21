@@ -33,8 +33,8 @@ export function Sidebar({ className }: SidebarProps) {
         className={cls.sidebarSwitcher}
         onClick={onToggle}
         theme={ButtonTheme.BACKGROUND_INVERTED}
-        long
-        size={ButtonSize.M}
+        square
+        size={ButtonSize.L}
       >
         {collapsed ? '>' : '<'}
       </Button>
