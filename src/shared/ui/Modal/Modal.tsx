@@ -1,3 +1,4 @@
+import { useTheme } from 'app/providers/ThemeProvider';
 import {
   ReactNode,
   MouseEvent,
@@ -7,6 +8,7 @@ import {
   useCallback,
 } from 'react';
 import { cn } from 'shared/lib/classNames/classNames';
+import { Portal } from '../Portal/Portal';
 import cls from './Modal.module.scss';
 
 interface ModalProps {
@@ -25,6 +27,8 @@ export function Modal({
   const CLOSING_ANIMATION_DELAY = 100;
   const [isClosing, setIsClosing] = useState(false);
   const closingTimerRef = useRef(null);
+  const { theme } = useTheme();
+
   const mods: Record<string, boolean> = {
     [cls.opened]: isOpen,
     [cls.closing]: isClosing,
@@ -64,10 +68,12 @@ export function Modal({
   }, [isOpen, onKeyDown]);
 
   return (
-    <div onClick={handleClose} className={cn(cls.Modal, mods, [className])}>
-      <div onClick={onContentClick} className={cls.content}>
-        {children}
+    <Portal>
+      <div onClick={handleClose} className={cn(cls.Modal, mods, [theme])}>
+        <div onClick={onContentClick} className={cls.content}>
+          {children}
+        </div>
       </div>
-    </div>
+    </Portal>
   );
 }

@@ -1,4 +1,3 @@
-/* eslint-disable i18next/no-literal-string */
 import { cn } from 'shared/lib/classNames/classNames';
 import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/Navbar';
@@ -11,7 +10,7 @@ function App() {
   const { theme } = useTheme();
 
   return (
-    <div className={cn('app', { hovered: true, active: true }, [theme, 'cls2'])}>
+    <div className={cn('app', { hovered: true, active: true }, [theme])}>
       <Suspense fallback={<Loader />}>
         <Navbar />
         <div className='content-page'>
